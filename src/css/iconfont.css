@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "dahaisolar"; /* Project id 2748976 */
+  src: url('../font/iconfont.woff2?t=1631263151540') format('woff2'),
+       url('../font/iconfont.woff?t=1631263151540') format('woff'),
+       url('../font/iconfont.ttf?t=1631263151540') format('truetype');
+}
+
+.dahaisolar {
+  font-family: "dahaisolar" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dahaisolar-jiantou_xiangyou:before {
+  content: "\eb08";
+}
+
+.dahaisolar-arrow_right:before {
+  content: "\e761";
+}
+
+.dahaisolar-arrowRight:before {
+  content: "\e65d";
+}
+
+.dahaisolar-jiantouxiangyou-Arrowtotheright:before {
+  content: "\e631";
+}
+
+.dahaisolar-diqiu:before {
+  content: "\e60a";
+}
+
+.dahaisolar-dianhua:before {
+  content: "\e667";
+}
+
+.dahaisolar-kefurexian:before {
+  content: "\e622";
+}
+
+.dahaisolar-phone:before {
+  content: "\e6dc";
+}
+
+.dahaisolar-dianhua1:before {
+  content: "\e639";
+}
+
+.dahaisolar-diqiu1:before {
+  content: "\e62e";
+}
+
+.dahaisolar-iconfontzhizuobiaozhun023140:before {
+  content: "\e68e";
+}
+
+.dahaisolar-didian:before {
+  content: "\e61a";
+}
+
+.dahaisolar-renyuanzengjia:before {
+  content: "\e687";
+}
+
+.dahaisolar-diqiu2:before {
+  content: "\e668";
+}
+
+.dahaisolar-xin:before {
+  content: "\e623";
+}
+
+.dahaisolar-icon-:before {
+  content: "\e6e5";
+}
+
+.dahaisolar-rili:before {
+  content: "\e685";
+}
+
+.dahaisolar-youxiang:before {
+  content: "\e65e";
+}
+
+.dahaisolar-PDF:before {
+  content: "\e61d";
+}
+
+.dahaisolar-dayinchuanzhen:before {
+  content: "\e627";
+}
+
+.dahaisolar-renyuan:before {
+  content: "\e646";
+}
+
+.dahaisolar-pdf:before {
+  content: "\e63f";
+}
+
+.dahaisolar-fax:before {
+  content: "\e620";
+}
+
+.dahaisolar-dianhua2:before {
+  content: "\e679";
+}
+
+.dahaisolar-didian1:before {
+  content: "\e671";
+}
+
+.dahaisolar-dianhua3:before {
+  content: "\e64d";
+}
+
+.dahaisolar-sousuo:before {
+  content: "\e63d";
+}
+
+.dahaisolar-fuli:before {
+  content: "\e6c2";
+}
+
+.dahaisolar-peixun:before {
+  content: "\e6cf";
+}
+
+.dahaisolar-youxiang1:before {
+  content: "\e608";
+}
+
+.dahaisolar-aims-full:before {
+  content: "\e851";
+}
+
+.dahaisolar-dianhua4:before {
+  content: "\e660";
+}
+
+.dahaisolar-didian2:before {
+  content: "\e65a";
+}
+
+.dahaisolar-didian3:before {
+  content: "\e603";
+}
+
+.dahaisolar-fuli1:before {
+  content: "\e6c4";
+}
+
+.dahaisolar-a-ziyuan61:before {
+  content: "\e6f5";
+}
+
+.dahaisolar-category:before {
+  content: "\e747";
+}
+
+.dahaisolar-close:before {
+  content: "\e748";
+}
+
+.dahaisolar-certified-supplier:before {
+  content: "\e749";
+}
+
+.dahaisolar-cart-Empty:before {
+  content: "\e74a";
+}
+

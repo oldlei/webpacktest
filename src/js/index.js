@@ -1,3 +1,3 @@
-require('../sass/a.scss');
-
-console.info('index');
+import "../css/iconfont.css";
+import "../css/index.scss";
+import "../html/index.html";
