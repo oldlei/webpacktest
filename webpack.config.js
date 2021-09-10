@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
     entry: {
-        // vendor: [], // 公共库
+        // vendor: ["jquery", "other-lib"], // 公共库
         index: './src/js/index',
         one: './src/js/one'
     },
@@ -80,6 +80,7 @@ module.exports = {
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
+            title: '首页',
             filename: 'html/index.html', // 输出
             template: 'src/html/index.html',
             chunks: ['index'],
