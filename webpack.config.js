@@ -12,7 +12,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: "[name].js"
+        filename: "static/js/[name].js"
     },
     module: {
         rules: [
@@ -46,12 +46,12 @@ module.exports = {
             },
             {
                 //排除
-                exclude: /\.(js|json|html|css|less|scss|png|gif|jpg|jpeg)$/,
+                exclude: /\.(js|json|html|css|less|scss|png|gif|jpg|jpeg|ttf|woff2?)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'font',
-                    publicPath: './font',
-                    name: '[name]-[hash:4].[ext]'
+                    // outputPath: 'other',
+                    // publicPath: './other',
+                    name: '[name].[ext]'
                 }
             },
             // {
@@ -76,12 +76,13 @@ module.exports = {
     // },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: devMode ? '[name].css' : '[name].[hash].css',
-            chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+            filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
+            chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
             title: '首页',
-            filename: 'html/index.html', // 输出
+            //filename: 'html/index.html', // 输出
+            filename: 'index.html', // 输出
             template: 'src/html/index.html',
             chunks: ['index'],
             minify: {
@@ -92,7 +93,7 @@ module.exports = {
             hash: true
         }),
         new HtmlWebpackPlugin({
-            filename: 'html/one.html', // 输出
+            filename: 'one.html', // 输出
             template: 'src/html/one.html',
             chunks: ['one'],
             minify: {
