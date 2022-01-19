@@ -1,12 +1,15 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')//导出单文件
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");//优化 替代 "style-loader"
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { DefinePlugin } = require('webpack')
 const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
     entry: {
         // vendor: ["jquery", "other-lib"], // 公共库
+        vendor: ["jquery"], // 公共库
         index: './src/js/index',
         one: './src/js/one'
     },
@@ -45,6 +48,23 @@ module.exports = {
                 },
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+                // use:[
+                //     {
+                //         loader: 'babel-loader',
+                //         options: {
+                //             // plugins: [
+                //             //     // '@babel/plugin-transform-arrow-functions',
+                //             //     // '@babel/plugin-transform-block-scoping'
+                //             // ]
+                //             // presets: ['@babel/preset-env']
+                //         }
+                //     }
+                // ],
+            },
+            {
                 //排除
                 exclude: /\.(js|json|html|css|less|scss|png|gif|jpg|jpeg|ttf|woff2?)$/,
                 loader: 'file-loader',
@@ -75,9 +95,10 @@ module.exports = {
     // 	minimize: true
     // },
     plugins: [
+        new CleanWebpackPlugin(),//清空打包文件夹,
         new MiniCssExtractPlugin({
-            filename: devMode ? 'css/[name].css' : 'css/[name].[hash].css',
-            chunkFilename: devMode ? 'css/[id].css' : 'css/[id].[hash].css',
+            filename: devMode ? 'static/css/[name].css' : 'css/[name].[hash].css',
+            chunkFilename: devMode ? 'static/css/[id].css' : 'css/[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
             title: '首页',
@@ -103,8 +124,20 @@ module.exports = {
             inject: true,
             hash: true
         }),
-        new CleanWebpackPlugin()
-
+        new DefinePlugin({
+            BASE_URL: '"./"'
+        }),
+        
+        new CopyWebpackPlugin({ // TODO : 未生效 
+            patterns: [
+                {
+                    from: 'public',
+                    globOptions: {
+                        ignore: []//忽略
+                    }
+                }
+            ]
+        })
 
 
     ],
